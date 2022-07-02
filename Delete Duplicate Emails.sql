@@ -21,10 +21,15 @@
 
 -- # Please write a DELETE statement and DO NOT write a SELECT statement.
 -- # Write your MySQL query statement below
-DELETE P2
+DELETE p1
 FROM Person p1 JOIN Person p2
 ON p1.Email = p2.Email
 AND p1.Id < p2.Id
 
 -- Solution 2
 DELETE p from Person p, Person q where p.Id>q.Id AND q.Email=p.Email 
+
+-- Solution 3
+DELETE p1
+FROM Person p1, Person p2
+WHERE p1.email = p2.email AND p1.id > p2.id;
